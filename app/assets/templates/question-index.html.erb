@@ -1,1 +1,27 @@
-<h1>Questions</h1>
+<!-- QUESTION-INDEX.HTML -->
+<div class='container'>
+	<div class="row">
+		
+		<div class="col-sm-4 col-sm-offset-4">
+			<p>
+				<form class="form-group" ng-submit="Post()">
+				    <input class="control-label col-sm-12" for="focusedInput" ng-model="question">
+				    <br>
+				    <p><button class="btn btn-default btn-block" type="submit">Post</button></p>
+				</form>
+			</p>
+		</div>
+
+		<br>
+	  <div class="col-sm-8 col-sm-offset-2">
+	    <div class="panel panel-default">	
+	      <div class="panel-heading">Questions</div>
+	        <div class="list-group">
+	          <a href="/questions/{{question.id}}" class="list-group-item" ng-repeat="question in questions">
+	            {{question.content}}
+	          </a>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+</div>
